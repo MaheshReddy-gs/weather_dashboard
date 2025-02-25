@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Existing Animations */
+@keyframes bounce-slow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+.animate-bounce-slow {
+  animation: bounce-slow 2s infinite ease-in-out;
+}
+
+@keyframes pulse-temp {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+}
+.animate-pulse-temp {
+  animation: pulse-temp 1.5s infinite;
+}
+
+@keyframes time-tick {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+.animate-time-tick {
+  animation: time-tick 1s infinite ease-in-out;
+}
+
+@keyframes humidity-fill {
+  0% {
+    height: 0;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.animate-humidity-fill {
+  animation: humidity-fill 1.5s ease-in-out forwards;
+  transition: height 0.5s ease;
+}
+
+@keyframes wind-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.animate-wind-spin {
+  animation: wind-spin calc(4s / var(--wind-speed)) infinite linear;
+}
+
+/* New Font Awesome Icon Animations */
+@keyframes cloud-move {
+  0% {
+    transform: translateX(-15px);
+  }
+  100% {
+    transform: translateX(15px);
+  }
+}
+.animate-cloud-move {
+  animation: cloud-move 4s infinite alternate ease-in-out;
+}
+
+@keyframes rain-fall {
+  0% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(20px);
+    opacity: 0.7;
+  }
+}
+.animate-rain-fall {
+  animation: rain-fall 1.5s infinite linear;
+}
+
+@keyframes sun-shine {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+.animate-sun-shine {
+  animation: sun-shine 4s infinite ease-in-out;
+}
+
+@keyframes lightning-flash {
+  0%,
+  20%,
+  40%,
+  60%,
+  80%,
+  100% {
+    opacity: 0;
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    opacity: 1;
+  }
+}
+.animate-lightning-flash {
+  animation: lightning-flash 1.5s infinite;
+}
+
+@keyframes snow-fall {
+  0% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(20px);
+    opacity: 0.8;
+  }
+}
+.animate-snow-fall {
+  animation: snow-fall 2s infinite linear;
+}
+
+@keyframes haze-drift {
+  0% {
+    transform: translateX(-10px) translateY(0);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateX(10px) translateY(5px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-10px) translateY(0);
+    opacity: 0.7;
+  }
+}
+.animate-haze-drift {
+  animation: haze-drift 6s infinite ease-in-out;
+}
