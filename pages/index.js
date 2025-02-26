@@ -4,7 +4,7 @@ import axios from "axios";
 
 const fetchCitySuggestions = async (query) => {
     const response = await axios.get(
-        `http://api.openweathermap.org/geo/1.0/direct?q=${query}&limit=5&appid=${process.env.NEXT_PUBLIC_OPENWEATHER_API_KEY}`
+        `https://api.openweathermap.org/geo/1.0/direct?q=${query}&limit=5&appid=${process.env.NEXT_PUBLIC_OPENWEATHER_API_KEY}`
     );
     return response.data;
 };
